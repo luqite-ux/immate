@@ -14,12 +14,7 @@ export const metadata: Metadata = {
   description:
     'immate.ai by Shenzhen Cylan Technology Co., Ltd. designs IM Mate AI translators and IM Cam video call cameras for B2B partners worldwide, including T10 MAX, T5 MAX, C30, and C41P.',
   icons: {
-    icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    apple: '/apple-icon.png',
+    icon: [{ url: '/icon.svg?v=20260911-im', type: 'image/svg+xml' }],
   },
 }
 
