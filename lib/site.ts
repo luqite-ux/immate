@@ -1,0 +1,19 @@
+export const siteConfig = {
+  brand: "immate",
+  brandAi: ".ai",
+  tagline: "IM Mate AI Translators · IM Cam Video Call Cameras",
+  legalName: "Shenzhen Cylan Technology Co., Ltd.",
+  domain: "immateai.com",
+  url: "https://immateai.com",
+  email: "info@immateai.com",
+  region: "Shenzhen, Guangdong, China",
+  nav: [
+    { label: "Home", href: "/" },
+    { label: "Products", href: "/products" },
+    { label: "Applications", href: "/applications" },
+    { label: "About", href: "/about" },
+    { label: "FAQ", href: "/faq" },
+    { label: "News", href: "/news" },
+    { label: "Contact", href: "/contact" },
+  ],
+} as const
