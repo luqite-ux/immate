@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { PageHero } from '@/components/page-hero'
+import { filterProductsByCategory } from '@/lib/product-filter'
 import { fetchProductsData } from '@/lib/products-db'
 export const metadata={title:'Products',description:'Explore IM Mate AI translators and IM Cam video call cameras.',alternates:{canonical:'https://immateai.com/products'}}
 
 export const revalidate = 60
 
-export default async function ProductsPage() {
+export default async function ProductsPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
   const products = await fetchProductsData()
-  return <><PageHero eyebrow="IM Mate · IM Cam" title="Smart devices for clearer human connection" description="Compare our translator and video call camera platforms for service, business and family applications."/><section className="mx-auto grid max-w-7xl gap-6 px-6 py-16 md:grid-cols-2">{products.map(p=><Link href={`/products/${p.slug}`} key={p.slug} className="grid rounded-2xl border bg-white p-5 shadow-sm sm:grid-cols-2"><div className="relative aspect-square rounded-xl bg-slate-50"><Image fill src={p.image} alt={p.imageAlt} className="object-contain p-4"/></div><div className="p-4"><p className="text-xs font-bold uppercase tracking-widest text-cyan-700">{p.categoryLabel}</p><h2 className="mt-2 text-3xl font-bold">{p.series} {p.name}</h2><p className="mt-3 text-slate-600">{p.summary}</p></div></Link>)}</section></>
+  const { category } = await searchParams
+  const visibleProducts = filterProductsByCategory(products, category)
+  return <><PageHero eyebrow="IM Mate · IM Cam" title="Smart devices for clearer human connection" description="Compare our translator and video call camera platforms for service, business and family applications."/><section className="mx-auto grid max-w-7xl items-stretch gap-6 px-6 py-16 md:grid-cols-2">{visibleProducts.map(p=><Link href={`/products/${p.slug}`} key={p.slug} className="grid h-full rounded-2xl border bg-white p-5 shadow-sm sm:grid-cols-2"><div className="relative aspect-square rounded-xl bg-slate-50"><Image fill src={p.image} alt={p.imageAlt} className="object-contain p-4"/></div><div className="flex h-full flex-col p-4"><p className="text-xs font-bold uppercase tracking-widest text-cyan-700">{p.categoryLabel}</p><h2 className="mt-2 text-3xl font-bold">{p.series} {p.name}</h2><p className="mt-3 text-slate-600">{p.summary}</p></div></Link>)}</section></>
 }
