@@ -3,6 +3,7 @@ import { fetchProductsData } from '@/lib/products-db'
 import Image from 'next/image'
 import { HeroCarousel } from '@/components/hero-carousel'
 import { Reveal } from '@/components/reveal'
+export const metadata={alternates:{canonical:'https://immateai.com'}}
 
 export const revalidate = 60
 

@@ -1,6 +1,7 @@
 import { PageHero } from '@/components/page-hero'
 import { InquiryForm } from '@/components/inquiry-form'
 import { fetchProductsData } from '@/lib/products-db'
+export const metadata={title:'Contact',description:'Contact Shenzhen Cylan Technology Co., Ltd. about IM Mate and IM Cam products.',alternates:{canonical:'https://immateai.com/contact'}}
 
 export const revalidate = 60
 

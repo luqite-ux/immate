@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PageHero } from '@/components/page-hero'
 import { fetchProductsData } from '@/lib/products-db'
+export const metadata={title:'Products',description:'Explore IM Mate AI translators and IM Cam video call cameras.',alternates:{canonical:'https://immateai.com/products'}}
 
 export const revalidate = 60
 
