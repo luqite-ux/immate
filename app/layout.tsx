@@ -40,6 +40,7 @@ export default function RootLayout({
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(jsonLd).replace(/</g,'\\u003c')}} />
         {process.env.VERCEL && <Analytics />}
+      <script async src="https://admin.globle-trade.com/api/public/analytics.js?tenantId=8b6f8303-1483-46b7-9950-def93298fa3c" />
       </body>
     </html>
   )
