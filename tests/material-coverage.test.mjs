@@ -13,6 +13,25 @@ test('about page uses supplied company facts and does not invent a founding year
   assert.match(source, /1\.6 million/i)
 })
 
+test('company evidence photos are published on About and represented on the homepage', async () => {
+  const about = await read('app/about/page.tsx')
+  const home = await read('app/page.tsx')
+  const assets = [
+    'cylan-rd-manufacturing.jpg',
+    'cylan-exhibition-video-camera.jpg',
+    'cylan-exhibition-ai-translator.jpg',
+  ]
+
+  for (const asset of assets) {
+    await assert.doesNotReject(read(`public/images/company/${asset}`), `missing company image: ${asset}`)
+    assert.match(about, new RegExp(asset.replace('.', '\\.')))
+  }
+  assert.match(home, /cylan-rd-manufacturing\.jpg/)
+  assert.match(about, /R&amp;D and product team/)
+  assert.match(about, /Manufacturing and assembly/)
+  assert.match(about, /Global exhibitions and customer connections/)
+})
+
 test('FAQ preserves every usable supplied buyer answer and excludes the forbidden warranty row', async () => {
   const source = await read('app/faq/page.tsx')
   for (const expected of [
