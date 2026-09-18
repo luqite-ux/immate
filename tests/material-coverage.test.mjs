@@ -32,6 +32,31 @@ test('company evidence photos are published on About and represented on the home
   assert.match(about, /Global exhibitions and customer connections/)
 })
 
+test('homepage presents supplied patents and design credentials as buyer-visible trust evidence', async () => {
+  const home = await read('app/page.tsx')
+  const assets = [
+    'dual-screen-utility-patent.jpg',
+    'adaptive-translation-invention-patent.jpg',
+    'eu-registered-design.jpg',
+    'sustainable-design-award.jpg',
+  ]
+
+  for (const asset of assets) {
+    await assert.doesNotReject(read(`public/images/credentials/${asset}`), `missing credential image: ${asset}`)
+    assert.match(home, new RegExp(asset.replace('.', '\\.')))
+  }
+
+  for (const claim of [
+    'Patents, design protection and product innovation',
+    'Dual-screen translator utility patent',
+    'Adaptive translation invention patent',
+    'European Union registered design',
+    'Turkish registered designs',
+    'AI translator software copyright',
+    '2026 sustainable product design award',
+  ]) assert.match(home, new RegExp(claim, 'i'))
+})
+
 test('FAQ preserves every usable supplied buyer answer and excludes the forbidden warranty row', async () => {
   const source = await read('app/faq/page.tsx')
   for (const expected of [
