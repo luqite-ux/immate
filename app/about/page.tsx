@@ -18,10 +18,9 @@ export default function About() {
     />
 
     <section className="mx-auto max-w-4xl px-6 py-16 text-lg leading-8 text-slate-700">
-      <p>Cylan develops home-security cameras, commercial AI translators and AI-enabled products for children. Customer materials state that its communication and smart-device services support more than 1.6 million devices across over 150 countries.</p>
+      <p>Cylan develops home-security cameras, commercial AI translators and connected communication products. Customer materials record more than 1.6 million connected devices serving users in markets worldwide.</p>
       <p className="mt-6">The 21-person team is strongly focused on research and development, with R&amp;D representing 80% of the team. Its work covers multilingual business service, remote video communication and smart monitoring.</p>
-      <p className="mt-6">Company materials identify CE, FCC, RoHS and UKCA compliance, European Union and Turkish patents, National High-Tech Enterprise status, specialized SME recognition and Shenzhen technology-SME recognition. Relevant documentation can be discussed for the selected product and market.</p>
-      <p className="mt-6">The company materials also record a 2026 international sustainable innovation product design award. Award and compliance documents are supplied on request where applicable.</p>
+      <p className="mt-6">Supplied records document product engineering, software development and registered industrial-design work in China, the European Union and Türkiye. The company materials also include a 2026 sustainable innovation product design award.</p>
     </section>
 
     <section className="bg-slate-950 py-20 text-white">

@@ -32,11 +32,11 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Logo />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center lg:flex" aria-label="Primary">
           <Link
             href="/"
             className={cn(
-              "rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground",
+              "rounded-md px-2 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground xl:px-3",
               pathname === "/" && "text-foreground",
             )}
           >
@@ -47,7 +47,7 @@ export function SiteHeader() {
             <DropdownMenuTrigger asChild>
               <button
                 className={cn(
-                  "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground",
+                  "flex items-center gap-1 rounded-md px-2 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground xl:px-3",
                   pathname.startsWith("/products") && "text-foreground",
                 )}
               >
@@ -71,7 +71,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground",
+                  "rounded-md px-2 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground xl:px-3",
                   pathname === item.href && "text-foreground",
                 )}
               >

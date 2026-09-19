@@ -9,7 +9,8 @@ test('about page uses supplied company facts and does not invent a founding year
   assert.doesNotMatch(source, /since 2005/i)
   assert.match(source, /21-person team/i)
   assert.match(source, /80%/)
-  assert.match(source, /150 countries/i)
+  assert.match(source, /1\.6 million connected devices/i)
+  assert.doesNotMatch(source, /130 countries|150 countries|95% global/i)
   assert.match(source, /1\.6 million/i)
 })
 
