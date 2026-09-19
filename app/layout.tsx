@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | immate.ai',
   },
   description:
-    'immate.ai by Shenzhen Cylan Technology Co., Ltd. designs IM Mate AI translators and IM Cam video call cameras for B2B partners worldwide, including T10 MAX, T5 MAX, C30, and C41P.',
+    'immate.ai by Shenzhen Sailan Technology Co., Ltd. designs IM Mate AI translators and IM Cam video call cameras for B2B partners worldwide, including T10 MAX, T5 MAX, C30, and C41P.',
   icons: {
     icon: [{ url: '/icon.svg?v=20260911-im', type: 'image/svg+xml' }],
   },

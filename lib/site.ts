@@ -2,7 +2,7 @@ export const siteConfig = {
   brand: "immate",
   brandAi: ".ai",
   tagline: "IM Mate AI Translators · IM Cam Video Call Cameras",
-  legalName: "Shenzhen Cylan Technology Co., Ltd.",
+  legalName: "Shenzhen Sailan Technology Co., Ltd.",
   domain: "immateai.com",
   url: "https://immateai.com",
   email: "info@immateai.com",

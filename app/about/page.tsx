@@ -5,7 +5,7 @@ import { Reveal } from '@/components/reveal'
 
 export const metadata = {
   title: 'About',
-  description: 'Learn about Shenzhen Cylan Technology Co., Ltd. and its IM Mate and IM Cam product families.',
+  description: 'Learn about Shenzhen Sailan Technology Co., Ltd. and its IM Mate and IM Cam product families.',
   alternates: { canonical: 'https://immateai.com/about' },
 }
 
@@ -14,7 +14,7 @@ export default function About() {
     <PageHero
       eyebrow="About Cylan"
       title="Focused engineering for intelligent communication"
-      description="Shenzhen Cylan Technology Co., Ltd. develops video communication and AI hardware for global partners."
+      description="Shenzhen Sailan Technology Co., Ltd. develops video communication and AI hardware for global partners."
     />
 
     <section className="mx-auto max-w-4xl px-6 py-16 text-lg leading-8 text-slate-700">

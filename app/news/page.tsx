@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { PageHero } from '@/components/page-hero'
 import { getPublishedArticles } from '@/lib/articles-db'
-export const metadata={title:'News',description:'Verified product and company updates from Shenzhen Cylan Technology Co., Ltd.',alternates:{canonical:'https://immateai.com/news'}}
+export const metadata={title:'News',description:'Verified product and company updates from Shenzhen Sailan Technology Co., Ltd.',alternates:{canonical:'https://immateai.com/news'}}
 
 export const revalidate = 60
 

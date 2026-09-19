@@ -47,7 +47,7 @@ export default async function HomePage() {
             { icon: Globe2, title: 'International design protection', text: 'European Union and Turkish registered designs for language-translation devices.' },
             { icon: Laptop, title: 'AI translator software copyright', text: 'Registered software copyright for Cylan AI Translator Management Software V1.0.0.' },
             { icon: Award, title: 'Recognized product design', text: 'A 2026 distinguished design award for the desktop intelligent dual-screen translator.' },
-            { icon: ShieldCheck, title: 'Documented ownership', text: 'Certificates identify Shenzhen Cylan Technology Co., Ltd. or Shenzhen Sailan Technology Co., Ltd. as the rights holder.' },
+            { icon: ShieldCheck, title: 'Documented ownership', text: 'Certificates identify Shenzhen Sailan Technology Co., Ltd. as the rights holder.' },
             { icon: BadgeCheck, title: 'Evidence available', text: 'Relevant patent, registration and award documents can be reviewed for applicable products and markets.' },
           ].map(({icon: Icon,title,text},i)=><Reveal key={title} delay={i*45} className="h-full bg-slate-950"><article className="h-full p-7 text-white"><Icon className="size-7 text-cyan-300" aria-hidden="true"/><h3 className="mt-5 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-slate-300">{text}</p></article></Reveal>)}
         </div>
